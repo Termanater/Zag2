@@ -3,19 +3,36 @@ import pandas as pd
 # Load the messy data and vendor list
 def process_data(messy_file, vendor_file, output_file):
     # Read the messy data and vendor list from Excel files
-    messy_data = pd.read_excel(messy_file)
-    vendor_list = pd.read_excel(vendor_file)
+    try:
+        messy_data = pd.read_excel(messy_file)
+        vendor_list = pd.read_excel(vendor_file)
+        vendor_list.columns = vendor_list.columns.str.strip()  # Strip column names
+    except Exception as e:
+        print(f"Error reading files: {e}")
+        return
+
+    # Debugging statement to confirm vendor_list is a DataFrame
+    print("Type of vendor_list:", type(vendor_list))
+    if isinstance(vendor_list, pd.DataFrame):
+        print("Columns in vendor_list:", vendor_list.columns)
+    else:
+        print("Error: vendor_list is not a DataFrame!")
+        return
     
     # Ensure the vendor list is a single column of strings
-    vendor_names = vendor_list['Vendor'].str.strip().tolist()
+    if 'Name' not in vendor_list.columns:
+        print("Error: 'Name' column not found in vendor_list!")
+        return
+    vendor_names = vendor_list['Name'].str.strip().tolist()
     
-    # Define a function to replace cells entirely with "VendorName" if a match is found
+    # Define a function to replace cells entirely with the vendor's actual name if a match is found
     def replace_with_vendor(text):
         if pd.isnull(text):  # Handle missing values
             return text
-        for vendor in vendor_names:
-            if vendor.lower() in str(text).lower():  # Case-insensitive match
-                return "VendorName"
+        # Iterate through each vendor name
+        for Name in vendor_names:
+            if Name.lower() in str(text).lower():  # Case-insensitive match
+                return Name  # Replace with the actual vendor name from vendor list
         return text  # Return original text if no match found
     
     # Apply the replacement function to all text columns in messy data
@@ -27,8 +44,8 @@ def process_data(messy_file, vendor_file, output_file):
     print(f"Cleaned data saved to {output_file}")
 
 # Example usage
-messy_file = "messy_data.xlsx"  # Replace with your input file
-vendor_file = "vendor_list.xlsx"  # Replace with your vendor list file
-output_file = "cleaned_data.xlsx"  # Replace with your desired output file
+messy_file = "4th qtr Coldrens 1982-docuclipper.xlsx"  # Replace with your input file
+vendor_file = "vendor_listCCC.xlsx"  # Replace with your vendor list file
+output_file = "test1234.xlsx"  # Replace with your desired output file
 
 process_data(messy_file, vendor_file, output_file)
