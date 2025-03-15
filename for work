@@ -27,14 +27,24 @@ def process_data(messy_file, vendor_file, output_file):
     
     # Define a function to replace cells entirely with the vendor's actual name if a match is found
     def replace_with_vendor(text):
-        if pd.isnull(text):  # Handle missing values
-            return text
-        # Iterate through each vendor name
-        for Name in vendor_names:
-            if Name.lower() in str(text).lower():  # Case-insensitive match
-                return Name  # Replace with the actual vendor name from vendor list
-        return text  # Return original text if no match found
+        try:
+            if pd.isnull(text):  # Handle missing values
+                return text
+            text = str(text)  # Ensure the text is treated as a string
+            for Name in vendor_names:
+                if str(Name).lower() in text.lower():  # Case-insensitive match
+                    return Name  # Replace with the actual vendor name from vendor list
+            return text  # Return original text if no match found
+        except Exception as e:
+            print(f"Error processing value: {text}, Error: {e}")
+            raise
     
+    # Debugging: Log the data types in messy_data
+    print("Data types in messy_data before processing:")
+    print(messy_data.dtypes)
+    print("First few rows of messy_data:")
+    print(messy_data.head())
+
     # Apply the replacement function to all text columns in messy data
     for column in messy_data.select_dtypes(include='object').columns:
         messy_data[column] = messy_data[column].apply(replace_with_vendor)
@@ -44,8 +54,8 @@ def process_data(messy_file, vendor_file, output_file):
     print(f"Cleaned data saved to {output_file}")
 
 # Example usage
-messy_file = "4th qtr Coldrens 1982-docuclipper.xlsx"  # Replace with your input file
-vendor_file = "vendor_listCCC.xlsx"  # Replace with your vendor list file
+messy_file = "111 Cal west Buildings 1.25 -docuclipper.xlsx"  # Replace with your input file
+vendor_file = "vendors.CWB-1943.2025-03-14.07-41_PM.xlsx"  # Replace with your vendor list file
 output_file = "test1234.xlsx"  # Replace with your desired output file
 
 process_data(messy_file, vendor_file, output_file)
