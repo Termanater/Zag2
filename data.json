@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Product_1",
+        "price": 98.49,
+        "in_stock": true,
+        "category": "Electronics",
+        "rating": 2.8
+    },
+    {
+        "id": 2,
+        "name": "Product_2",
+        "price": 43.87,
+        "in_stock": false,
+        "category": "Books",
+        "rating": 1.2
+    },
+    {
+        "id": 3,
+        "name": "Product_3",
+        "price": 33.23,
+        "in_stock": true,
+        "category": "Clothing",
+        "rating": 1.4
+    },
+    {
+        "id": 4,
+        "name": "Product_4",
+        "price": 63.88,
+        "in_stock": true,
+        "category": "Clothing",
+        "rating": 4.2
+    },
+    {
+        "id": 5,
+        "name": "Product_5",
+        "price": 30.03,
+        "in_stock": true,
+        "category": "Electronics",
+        "rating": 2.1
+    },
+    {
+        "id": 6,
+        "name": "Product_6",
+        "price": 66.23,
+        "in_stock": false,
+        "category": "Home",
+        "rating": 4.0
+    },
+    {
+        "id": 7,
+        "name": "Product_7",
+        "price": 96.98,
+        "in_stock": true,
+        "category": "Books",
+        "rating": 4.5
+    },
+    {
+        "id": 8,
+        "name": "Product_8",
+        "price": 59.8,
+        "in_stock": true,
+        "category": "Books",
+        "rating": 1.0
+    },
+    {
+        "id": 9,
+        "name": "Product_9",
+        "price": 91.12,
+        "in_stock": true,
+        "category": "Clothing",
+        "rating": 3.6
+    },
+    {
+        "id": 10,
+        "name": "Product_10",
+        "price": 72.53,
+        "in_stock": true,
+        "category": "Books",
+        "rating": 2.2
+    }
+]
