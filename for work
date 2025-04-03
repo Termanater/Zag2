@@ -54,8 +54,8 @@ def process_data(messy_file, vendor_file, output_file):
     print(f"Cleaned data saved to {output_file}")
 
 # Example usage
-messy_file = "Chase7148 July to Dec 2024 - Docuclipper.xlsx"  # Replace with your input file
-vendor_file = "vendors.SRS.xlsx"  # Replace with your vendor list file
+messy_file = "Amex 2022 Annual-docuclipper.xlsx"  # Replace with your input file
+vendor_file = "AW Vendor Template Prime Truck.xlsx"  # Replace with your vendor list file
 output_file = "test1234.xlsx"  # Replace with your desired output file
 
 process_data(messy_file, vendor_file, output_file)
