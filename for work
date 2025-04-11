@@ -54,7 +54,7 @@ def process_data(messy_file, vendor_file, output_file):
     print(f"Cleaned data saved to {output_file}")
 
 # Example usage
-messy_file = "1st qtr 2025 Capital one.xlsx"  # Replace with your input file
+messy_file = "1ST QTR Chase1545.xlsx"  # Replace with your input file
 vendor_file = "vendors.BTE.xlsx"  # Replace with your vendor list file
 output_file = "test1234.xlsx"  # Replace with your desired output file
 
