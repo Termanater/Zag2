@@ -55,7 +55,7 @@ def process_data(messy_file, vendor_file, output_file):
 
 # Example usage
 messy_file = "Working File.xlsx"  # Replace with your input file
-vendor_file = "vendors.PLM-.xlsx"  # Replace with your vendor list file
+vendor_file = "vendors.PPB.xlsx"  # Replace with your vendor list file
 output_file = "test1234.xlsx"  # Replace with your desired output file
 
 process_data(messy_file, vendor_file, output_file)
