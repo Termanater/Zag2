@@ -1,0 +1,64 @@
+import pandas as pd
+
+# Load the messy data and vendor list
+def process_data(messy_file, vendor_file, new_sheet_name='Cleaned'):
+    # Read the messy data and vendor list from Excel files
+    try:
+        messy_data = pd.read_excel(messy_file)
+        vendor_list = pd.read_excel(vendor_file)
+        vendor_list.columns = vendor_list.columns.str.strip()  # Strip column names
+    except Exception as e:
+        print(f"Error reading files: {e}")
+        return
+
+    # Debugging statement to confirm vendor_list is a DataFrame
+    print("Type of vendor_list:", type(vendor_list))
+    if isinstance(vendor_list, pd.DataFrame):
+        print("Columns in vendor_list:", vendor_list.columns)
+    else:
+        print("Error: vendor_list is not a DataFrame!")
+        return
+    
+    # Ensure the vendor list is a single column of strings
+    if 'Name' not in vendor_list.columns:
+        print("Error: 'Name' column not found in vendor_list!")
+        return
+    vendor_names = vendor_list['Name'].str.strip().tolist()
+    
+    # Define a function to replace cells entirely with the vendor's actual name if a match is found
+    def replace_with_vendor(text):
+        try:
+            if pd.isnull(text):  # Handle missing values
+                return text
+            text = str(text)  # Ensure the text is treated as a string
+            for Name in vendor_names:
+                if str(Name).lower() in text.lower():  # Case-insensitive match
+                    return Name  # Replace with the actual vendor name from vendor list
+            return text  # Return original text if no match found
+        except Exception as e:
+            print(f"Error processing value: {text}, Error: {e}")
+            raise
+    
+    # Debugging: Log the data types in messy_data
+    print("Data types in messy_data before processing:")
+    print(messy_data.dtypes)
+    print("First few rows of messy_data:")
+    print(messy_data.head())
+
+    # Apply the replacement function to all text columns in messy data
+    for column in messy_data.select_dtypes(include='object').columns:
+        messy_data[column] = messy_data[column].apply(replace_with_vendor)
+    
+    # Append the cleaned data to a new sheet in the original messy_file workbook
+    try:
+        with pd.ExcelWriter(messy_file, mode='a', engine='openpyxl') as writer:
+            messy_data.to_excel(writer, sheet_name=new_sheet_name, index=False)
+        print(f"Cleaned data appended to new sheet '{new_sheet_name}' in {messy_file}")
+    except Exception as e:
+        print(f"Error writing to file: {e}")
+
+# Example usage
+messy_file = "Working_File1.xlsx"  # Replace with your input file
+vendor_file = "vendors.xlsx"  # Replace with your vendor list file
+
+process_data(messy_file, vendor_file)
