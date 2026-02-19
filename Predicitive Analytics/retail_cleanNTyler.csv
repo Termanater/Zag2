@@ -1,0 +1,33 @@
+product,size,price,in_stock,category,date_added,is_extreme_outlier,quality_flag
+leather wallet,M,32.08,False,accessories,2026-02-06,False,OK
+black jeans,XXL,124.11,,bottoms,2026-01-28,False,OK
+blue shirt,M,44.89,,tops,2026-01-13,False,OK
+navy blazer,L,182.15,False,formal,2026-01-10,False,OK
+blue pants,XL,80.96,,bottoms,2025-11-21,False,OK
+gray sweater,L,65.46,False,tops,2025-11-02,False,OK
+leather wallet,XL,79.14,False,accessories,2025-10-23,False,OK
+yellow skirt,XXL,56.82,,bottoms,2025-10-14,False,OK
+khaki shorts,XXL,31.21,False,bottoms,2025-08-25,False,OK
+brown belt,M,36.19,,accessories,2025-08-08,False,OK
+yellow skirt,M,79.27,,bottoms,2025-07-26,False,OK
+yellow_skirt,XL,102.51,,bottoms,2025-07-24,False,OK
+unknown product,S,41.72,,tops,2025-07-12,False,OK
+sports socks,M,7.16,,accessories,2025-06-29,False,OK
+green hoodie,XS,63.41,False,tops,2025-05-20,False,OK
+denim jacket,L,119.3,False,outerwear,2025-05-07,False,OK
+khaki shorts,XS,55.91,False,bottoms,2025-04-29,False,OK
+,S,56.18,,outerwear,2025-04-29,False,OK
+denim jacket,XL,213.99,False,outerwear,2025-04-15,False,OK
+yellow skirt,XS,71.14,False,bottoms,2025-03-31,False,OK
+black jeans,S,45.39,False,bottoms,2025-03-28,False,OK
+red shirt,XXL,35.4,False,tops,2025-03-17,False,OK
+black boots,S,182.51,False,shoes,2025-03-03,False,OK
+black jeans,XS,47.16,,bottoms,2025-01-08,False,OK
+green hoodie,M,0.0,,tops,2024-11-20,False,OK
+blue pants,M,70.75,False,bottoms,2024-11-09,False,OK
+silver tie,S,24.52,,accessories,2024-11-05,False,OK
+white tuxedo,M,0.0,False,formal,2024-09-20,False,OK
+black-jeans,XS,87.73,,bottoms,2024-09-12,False,OK
+white dress,XL,0.0,True,dresses,2024-09-11,False,OK
+silver tie,XS,31.98,,accessories,2024-08-22,False,OK
+red shirt,L,28.1,True,tops,2024-08-18,False,OK
