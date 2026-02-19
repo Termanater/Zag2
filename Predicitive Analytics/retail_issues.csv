@@ -1,0 +1,87 @@
+product,size,price,in_stock,category,date_added,is_extreme_outlier,quality_flag
+navy blazer,XS,173.39,,formal,2026-05-25,False,SUSPECT_DATE
+,XS,8966.0,False,bottoms,2026-05-12,True,SUSPECT_DATE
+brown belt,XS,19.88,,accessories,2026-05-10,False,SUSPECT_DATE
+white tuxedo,L,502.63,,formal,2026-05-09,False,SUSPECT_DATE
+sports socks,S,18.27,False,accessories,2026-05-07,False,SUSPECT_DATE
+red shirt,XL,47.59,,tops,2026-04-06,False,SUSPECT_DATE
+red shirt,M,56.79,,tops,2026-04-02,False,SUSPECT_DATE
+silver tie,XXL,0.0,,accessories,2026-03-29,False,SUSPECT_DATE
+gray_sweater,XS,102.89,,tops,2026-03-03,False,SUSPECT_DATE
+black tuxedo,S,623.42,,formal,2025-12-26,True,OUTLIER_PRICE
+,,72.53,False,accessories,2025-12-09,False,INVALID_SIZE
+navy blazer,XXL,21516.0,,formal,2025-09-18,True,OUTLIER_PRICE
+sports socks,,1604.0,True,accessories,2025-09-04,True,OUTLIER_PRICE
+white sneakers,L,107590.0,,shoes,2025-05-10,True,OUTLIER_PRICE
+blue shirt,,54.46,,tops,2025-04-21,False,INVALID_SIZE
+black boots,,220.08,False,shoes,2024-08-12,False,INVALID_SIZE
+sports socks,XS,9.84,,accessories,,False,INVALID_DATE
+green hoodie,,74.53,,tops,,False,INVALID_DATE
+pink blouse,XL,62.22,False,tops,,False,INVALID_DATE
+white tuxedo,S,289.85,False,formal,,False,INVALID_DATE
+white sneakers,,66.43,,shoes,,False,INVALID_DATE
+khaki shorts,S,59.61,False,bottoms,,False,INVALID_DATE
+blue pants,XS,44.09,True,bottoms,,False,INVALID_DATE
+black jeans,XL,128.3,,bottoms,,False,INVALID_DATE
+black boots,XL,285.56,False,shoes,,False,INVALID_DATE
+white dress,XS,191.69,,dresses,,False,INVALID_DATE
+khaki shorts,OFA,49.63,,bottoms,,False,INVALID_DATE
+leather-wallet,XL,37.77,False,accessories,,False,INVALID_DATE
+denim jacket,XXL,70.51,,outerwear,,False,INVALID_DATE
+black_tuxedo,S,594.01,False,formal,,True,OUTLIER_PRICE
+khaki shorts,XL,30.79,False,bottoms,,False,INVALID_DATE
+silver tie,M,63.22,False,accessories,,False,INVALID_DATE
+sports socks,L,24.08,,accessories,,False,INVALID_DATE
+khaki shorts,M,55.16,,bottoms,,False,INVALID_DATE
+blue pants,L,71.16,,bottoms,,False,INVALID_DATE
+black jeans,M,67.05,False,bottoms,,False,INVALID_DATE
+leather wallet,L,75.6,False,accessories,,False,INVALID_DATE
+blue shirt,XXL,53.1,,tops,,False,INVALID_DATE
+black tuxedo,XS,824.7,,formal,,True,OUTLIER_PRICE
+pink blouse,XXL,40.7,,tops,,False,INVALID_DATE
+navy  blazer,L,313.46,False,formal,,False,INVALID_DATE
+white dress,M,189.78,,dresses,,False,INVALID_DATE
+gray sweater,XS,131.99,,tops,,False,INVALID_DATE
+green hoodie,XXL,83.87,,tops,,False,INVALID_DATE
+pink blouse,XS,86.64,,tops,,False,INVALID_DATE
+gray sweater,M,101.34,,tops,,False,INVALID_DATE
+black boots,XXL,274.25,False,shoes,,False,INVALID_DATE
+,L,785.27,False,tops,,True,OUTLIER_PRICE
+blue shirt,XS,5631.0,,tops,,True,OUTLIER_PRICE
+navy blazer,M,333.49,,formal,,False,INVALID_DATE
+brown belt,XXL,26.46,,accessories,,False,INVALID_DATE
+white sneakers,XXL,120.95,,shoes,,False,INVALID_DATE
+brown belt,XL,44.46,,accessories,,False,INVALID_DATE
+yellow skirt,XL,95.44,,bottoms,,False,INVALID_DATE
+khaki shorts,L,71.28,False,bottoms,,False,INVALID_DATE
+gray sweater,OFA,123.89,,tops,,False,INVALID_DATE
+navy blazer,S,371.6,,formal,,False,INVALID_DATE
+denim jacket,XS,195.43,,outerwear,,False,INVALID_DATE
+black jeans,,68.06,False,bottoms,,False,INVALID_DATE
+yellow skirt,L,63.93,,bottoms,,False,INVALID_DATE
+white dress,XXL,134.11,,dresses,,False,INVALID_DATE
+leather wallet,XXL,0.0,False,accessories,,False,INVALID_DATE
+black boots,L,200.82,False,shoes,,False,INVALID_DATE
+yellow skirt,,91.52,,bottoms,,False,INVALID_DATE
+black  boots,XS,260.81,,shoes,,False,INVALID_DATE
+yellow skirt,S,81.67,,bottoms,,False,INVALID_DATE
+blue shirt,S,58.07,,tops,,False,INVALID_DATE
+yellow skirt,OFA,84.21,,bottoms,,False,INVALID_DATE
+denim jacket,M,62.65,False,outerwear,,False,INVALID_DATE
+leather wallet,S,81.13,,accessories,,False,INVALID_DATE
+white tuxedo,XXL,353.36,,formal,,False,INVALID_DATE
+denim jacket,,206.12,False,outerwear,,False,INVALID_DATE
+brown belt,,484.4,False,accessories,,False,OUTLIER_PRICE
+white sneakers,XL,91.63,,shoes,,False,INVALID_DATE
+black-jeans,M,97.71,,bottoms,,False,INVALID_DATE
+gray sweater,XXL,113.8,False,tops,,False,INVALID_DATE
+black boots,M,105.72,,shoes,,False,INVALID_DATE
+silver tie,,60.06,,accessories,,False,INVALID_DATE
+green hoodie,XL,8881.0,False,tops,,True,OUTLIER_PRICE
+white dress,S,147.33,,dresses,,False,INVALID_DATE
+black boots,XS,259.16,True,shoes,,False,INVALID_DATE
+white_tuxedo,XS,397.54,,formal,,False,OUTLIER_PRICE
+pink blouse,L,106.0,,tops,,False,INVALID_DATE
+silver tie,L,63.27,,accessories,,False,INVALID_DATE
+gray sweater,S,106.86,,tops,,False,INVALID_DATE
+unknown product,L,26.73,,outerwear,,False,INVALID_DATE
